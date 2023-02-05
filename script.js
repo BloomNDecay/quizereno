@@ -132,8 +132,8 @@ const questions = [
   {
     question: 'What element does the chemical symbol Ag represent?',
     answers: [
-      { text: 'Salt', correct: true },
-      { text: 'Silver', correct: false },
+      { text: 'Salt', correct: false },
+      { text: 'Silver', correct: true },
       { text: 'Gold', correct: false },
       { text: 'Magnesium', correct: false }
     ]
@@ -175,3 +175,22 @@ const questions = [
     ]
   },
 ]
+
+
+let timer
+let timeLeft = 45 // 45 seconds
+const timerElement = document.getElementById('timer')
+
+startButton.addEventListener('click', startTimer)
+
+function startTimer() {
+  startGame()
+  timer = setInterval(() => {
+    timeLeft--
+    timerElement.innerText = timeLeft + ' seconds left'
+    if (timeLeft === 0) {
+      clearInterval(timer)
+      alert('Time\'s up!')
+    }
+  }, 1000)
+}
