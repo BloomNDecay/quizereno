@@ -82,7 +82,7 @@ function setStatusClass(element, correct) {
       element.classList.remove('correct')
       element.classList.remove('wrong')
     }
-
+//create questions for the quiz 
 const questions = [
   {
     question: 'Which of the following is not a fruit?',
@@ -199,7 +199,7 @@ function startTimer() {
 function endGame() {
   // Disable answer buttons
   const answerButtons = document.querySelectorAll('.btn');
-  answerButtons.forEach(button => {
+  answerButtons.forEach((button) => {
     button.disabled = true;
   });
 
@@ -223,7 +223,7 @@ function endGame() {
 function restartGame() {
   // Enable answer buttons
   const answerButtons = document.querySelectorAll('.btn');
-  answerButtons.forEach(button => {
+  answerButtons.forEach((button) => {
     button.disabled = false;
   });
 
