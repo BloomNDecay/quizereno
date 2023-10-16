@@ -17,4 +17,5 @@ The game's front end is built with HTML and styled with CSS, while the functiona
 - Restart the game after completing all questions.
 - Visually appealing design
 
-
+click the link below to take you to the game.
+https://bloomndecay.github.io/quizereno/
