@@ -2,16 +2,6 @@
 
 Welcome to Quizereno, a simple quiz game built using HTML, CSS, and JavaScript! This readme will provide you with an overview of the project and guide you on how to set it up and run it.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [How to Play](#how-to-play)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Introduction
 
 Quizereno is a web-based quiz game that allows users to answer a series of multiple-choice questions. It features a timer to add an element of challenge, and it provides instant feedback on whether each answer is correct or incorrect.
