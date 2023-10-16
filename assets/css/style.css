@@ -1,0 +1,79 @@
+
+*,*::before, *::after {
+  box-sizing: border-box;
+  font-family:fantasy
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+justify-content: center;
+align-items: center ;
+background-image: url(https://thumbs.gfycat.com/DefiniteImmenseHalicore-size_restricted.gif);
+
+}
+
+body.correct {
+  background-image: url(https://cdn.wallpapersafari.com/42/88/9ynmFP.gif);
+}
+
+body.wrong{
+  background-image: url(https://64.media.tumblr.com/7696b08be336171baef4a005d1426e1a/0727fe47787d0a0c-a6/s540x810/595474d90bdf58493ae0d3a4ea5c1bf3391242a1.gif);
+}
+ .container {
+  width: 800px;
+  max-width: 80%;
+  background-color: rgb(242, 225, 255);
+  border-radius: 6px;
+  padding: 15px;  
+  box-shadow: 0 0 10px 2px;
+ }
+
+ .btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  gap: 40px;
+  margin: 55px 0;
+ }
+
+  .btn {
+    background-color:blueviolet;
+    border:2px solid  rgb(49, 4, 49);
+    border-radius: 5px;
+    padding: 10px 10px;
+    outline: none;
+  }
+
+  .btn:hover {
+    border-color: yellow;
+  }
+
+  .btn.correct {
+background-color: green;
+  }
+
+  .btn.wrong {
+background-color: red;
+  }
+
+  .start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding:10px 20px;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hide {
+    display: none;
+  }
+
+
