@@ -82,7 +82,7 @@ function setStatusClass(element, correct) {
       element.classList.remove('correct')
       element.classList.remove('wrong')
     }
-//create questions for the quiz 
+
 const questions = [
   {
     question: 'Which of the following is not a fruit?',
@@ -177,67 +177,20 @@ const questions = [
 ]
 
 
-let timer;
-let timeLeft = 45; // 45 seconds
-const timerElement = document.getElementById('timer');
+let timer
+let timeLeft = 45 // 45 seconds
+const timerElement = document.getElementById('timer')
 
-startButton.addEventListener('click', startTimer);
+startButton.addEventListener('click', startTimer)
 
 function startTimer() {
-  startGame();
+  startGame()
   timer = setInterval(() => {
-    if (timeLeft > 0) {
-      timeLeft--;
-      timerElement.innerText = `Time remaining: ${timeLeft} seconds`;
-    } else {
-      clearInterval(timer);
-      endGame(); // End the game when the timer runs out
+    timeLeft--
+    timerElement.innerText = timeLeft + ' seconds left'
+    if (timeLeft === 0) {
+      clearInterval(timer)
+      alert('Time\'s up!')
     }
-  }, 1000);
-}
-
-function endGame() {
-  // Disable answer buttons
-  const answerButtons = document.querySelectorAll('.btn');
-  answerButtons.forEach((button) => {
-    button.disabled = true;
-  });
-
-  // Display a message that the game has ended
-  questionElement.innerText = 'Game Over';
-  nextButton.classList.add('hide');
-
-  // Create a "Play Again" button
-  const playAgainButton = document.createElement('button');
-  playAgainButton.innerText = 'Play Again';
-  playAgainButton.classList.add('btn', 'start-btn');
-  playAgainButton.addEventListener('click', () => {
-    restartGame();
-  });
-
-  // Append the "Play Again" button to the controls
-  const controls = document.querySelector('.controls');
-  controls.appendChild(playAgainButton);
-}
-
-function restartGame() {
-  // Enable answer buttons
-  const answerButtons = document.querySelectorAll('.btn');
-  answerButtons.forEach((button) => {
-    button.disabled = false;
-  });
-
-  // Remove the "Play Again" button
-  const playAgainButton = document.querySelector('.start-btn');
-  if (playAgainButton) {
-    playAgainButton.remove();
-  }
-
-  // Reset the timer and start a new game
-  timeLeft = 45;
-  timerElement.innerText = `Time remaining: ${timeLeft} seconds`;
-  clearInterval(timer);
-  startTimer();
-  currentQuestionIndex = 0; // Reset the question index
-  nextQuestion();
+  }, 1000)
 }
